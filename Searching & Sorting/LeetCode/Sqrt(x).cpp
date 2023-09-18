@@ -7,6 +7,7 @@ public:
         
         while(s<=e){
             // int mid = s + (e-s)/2;
+            //using long long because mid * mid gives a large value in few cases.
             long long mid = s + (e - s)/2;
 
             if (mid*mid == x)
