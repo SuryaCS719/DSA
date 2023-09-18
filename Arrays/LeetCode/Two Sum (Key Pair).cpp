@@ -64,3 +64,36 @@ public:
 };
 
 // Method 2: Need an approach to solve it in less than O(n^2)
+
+
+
+
+
+// And by the way: 
+/* This wont work because when you sort the array the indices change.
+
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        vector<int> sortedArr = nums;
+        vector<int> ans;
+        sort(sortedArr.begin(), sortedArr.end());
+
+        int n = sortedArr.size();
+        int l = 0;
+        int h = n - 1;
+
+        while(l < h){
+            int currSum = sortedArr[l] + sortedArr[h];
+            if(currSum == target){
+                ans.push_back(l);
+                ans.push_back(h);
+                return ans;
+            }
+            else if(currSum > target) h--;
+            else if(currSum < target) l++;
+        }
+        return ans;
+    }
+};
+*/
