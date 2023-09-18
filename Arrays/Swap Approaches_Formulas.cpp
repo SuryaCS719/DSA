@@ -14,3 +14,5 @@ step 3: a = a - b;
 step 1: a = a ^ b;
 step 2: b = a ^ b;
 step 3: a = a ^ b;
+
+Note: XOR is faster as bitwise operators are more close to computer hardware representation thus less work for computer where as (+,-) are more of a work.
