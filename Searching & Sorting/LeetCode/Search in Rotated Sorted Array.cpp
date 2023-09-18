@@ -28,7 +28,10 @@ public:
             // Part 2
             else if(nums[s] > nums[mid])
                 e = mid - 1;
+                
             // Part 1
+            // else if(nums[s] <= nums[mid])
+            //     s = mid + 1;
             else
                 s = mid + 1;
         }
