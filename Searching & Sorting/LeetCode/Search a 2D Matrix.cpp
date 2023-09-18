@@ -11,8 +11,7 @@ public:
 
         while(s <= e){
             int mid = s + (e - s)/2;
-
-            // 2D to 1D Conversion Formula:
+            
             int rowIndex = mid / col;
             int colIndex = mid % col;
             int currNumber = matrix[rowIndex][colIndex];
