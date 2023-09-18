@@ -1,3 +1,4 @@
+// 1. Count 0's and 1's
 void countZeroOne(int arr[], int n){
     int zeroCount = 0;
     int oneCount = 0;
