@@ -1,4 +1,4 @@
-// 1. Arrange -ve no and +ve no
+// 1.1 Arrange -ve no and +ve no
 
 void arrange(int arr[], int n){
     int j = 0;
@@ -7,6 +7,8 @@ void arrange(int arr[], int n){
             swap(arr[i], arr[j]);
             j++;
         }
+        // else if(arr[i] >= 0) // Not needed
+        //     continue;
     }
 }
 
