@@ -39,26 +39,10 @@ void dutchNationalFlagAlgo(int *arr, int n){
     }
 }
 
-// myApproach
-void moveAllNegToLeft(int arr[], int n){
-    int index = 0;
-    int negativeHolder = 0;
-    for(int i = 0; i<n; i++){
-        if(arr[i] >= 0)
-            index++;
-        else if(arr[i] < 0){
-            swap(arr[index], arr[negativeHolder]);
-            negativeHolder++;
-            index++;
-        }
-    }
-}
-
 int main(){
     int arr[] = {0,1,2,-3,4,-5,6};
     int n = sizeof(arr)/sizeof(arr[0]);
     // sort(arr, arr + n); method 1 ; TC O(nlogn) ; SC O(n)
-    // moveAllNegToLeft(arr, n); method 2 myApproach TC: O(n) ; SC: O(1) 
     dutchNationalFlagAlgo(arr, n); 
 
     for(int i = 0; i<n; i++){
