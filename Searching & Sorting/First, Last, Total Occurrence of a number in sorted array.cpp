@@ -78,6 +78,11 @@ int main(){
 int totalOccurence(int arr[], int n, int target){
     int first = firstOccurence(arr, n, target);
     int last = lastOccurence(arr, n, target);
+
+    // Incase of target is not present
+    if(first == -1 && last == -1) // simply can use first == -1
+        return -1;
+    
     int totalOccurence = last - first + 1;
     return totalOccurence;
 }
