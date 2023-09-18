@@ -1,3 +1,5 @@
+// Formula to find Total Occurences =  LastOccur - FirstOccur + 1
+
 // 2.1 Find first occurence of a no. in a sorted array
 
 int firstOccurence(int arr[], int n, int target){
