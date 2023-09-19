@@ -26,9 +26,21 @@ int main(){
 
 // Variation 2: Expected Output: 30 4 5
 
-void reverseDiagPrintV2(int (*arr)[4], int row, int col){ // same as int arr[][4]
-    for(int i = row-1, j = 0 ; i >=0 && j < col ; i--, j++){
+// Using for loop
+void reverseDiagPrintV2(int (*arr)[4], int row, int col){  // same as int arr[][4]
+    for(int i = row-1, j = 0 ; i >=0 ; i--, j++){
         cout << arr[i][j] << " ";
+    }
+}
+
+// Using while loop
+void reverseDiagPrintV2(int (*arr)[4], int row, int col){
+    int i = row - 1;
+    int j = 0;
+    while(i>=0){
+        cout<< arr[i][j] << " ";
+        i--;
+        j++;
     }
 }
 
