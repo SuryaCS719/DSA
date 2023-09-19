@@ -39,7 +39,7 @@ public:
 
 // Note: Even after using 2 pointer, TC: O(nlogN) + O(N) = O(nlogN) ; SC: O(N) due to the sort function.
 
-// Question: Two Sum
+// Question: Two Sum ; LeetCode (returns indices of the elements that is equal to the target value)
 
 // Method 1: TC: O(n^2)
 class Solution {
