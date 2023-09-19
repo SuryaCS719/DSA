@@ -2,7 +2,7 @@
 #include <vector>
 using namespace std;
 
-//WavePrint Col Wise
+//WavePrint Col Wise: for even col -> Top-Bottom ; odd col -> Bottom-Up
 void wavePrintMatrix(vector<vector<int> > arr){
     int row = arr.size();
     int col = arr[0].size();
@@ -22,7 +22,7 @@ void wavePrintMatrix(vector<vector<int> > arr){
     }  
 }
 
-//WavePrint Row Wise
+//WavePrint Row Wise: for even col -> firstCol - lastCol ; odd row: lastCol - firstCol
 void wavePrintMatrixV2(vector<vector<int> > arr){
   int row = arr.size();
   int col = arr[0].size();
