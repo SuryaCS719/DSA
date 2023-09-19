@@ -42,6 +42,7 @@ public:
 class Solution {
 public:
     void rotate(vector<int>& nums, int k) {
+        // if n = 5 and k = 6 then it then the o/p will be equal to that of k = 1. if n and k have same values that is no of rotations = length of array then the original array is the answer i.e k = 0.
         k = k % nums.size();
         // 1. reverse [0, n-1]
         reverse(nums.begin(), nums.end());
