@@ -1,5 +1,31 @@
 // 3. Sort 0's and 1's 
 
+// Method 1 using Dutch National Flag Algo
+void sortZeroOne(int *arr, int n){
+    int low=0, high=n-1;
+    while(low<high){
+        if(arr[low] == 0)
+            low++;
+        else if(arr[high] == 1)
+            high--;
+        else    
+            swap(arr[low], arr[high]);
+    }
+}
+
+int main(){
+    int arr[] = {0,0,0,1,0,0};
+    int n = sizeof(arr)/sizeof(arr[0]);
+    // sort(arr, arr + n);
+    sortZeroOne(arr, n); 
+
+    for(int i = 0; i<n; i++){
+        cout << arr[i] << " "; 
+    }
+}
+
+// Method 2: count and then append.
+
 void sortZeroOne(int arr[], int n){
     int zeroCount = 0;
     int oneCount = 0;
