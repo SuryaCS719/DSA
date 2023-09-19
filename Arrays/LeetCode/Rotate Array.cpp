@@ -1,4 +1,4 @@
-// 3 approaches: Temp kth size array ; Modulous Formula, Reversal Algorithm
+// 3 approaches: Temp kth size array ; Modulous Formula, Reversal Algorithm ; Single rotate K times
 
 // Method-1: Using Temp kth size array
 class Solution {
