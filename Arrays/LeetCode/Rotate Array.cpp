@@ -51,3 +51,24 @@ public:
         reverse(nums.begin() + k , nums.end());
     }
 };
+
+// Method 3: Reverse Algorithm using our own reverse function
+class Solution {
+public:
+    void reverseVector(vector<int>& nums, int start, int end){
+      while(start <= end){
+        swap(nums[start], nums[end]);
+        start++; 
+        end--;
+      }
+    }
+
+    void rotate(vector<int>& nums, int k) {
+        int n = nums.size();
+        k = k % nums.size();
+        // cannot pass nums.begin() in reverse()
+        reverseVector(nums, 0, n - 1);
+        reverseVector(nums, 0, k - 1);
+        reverseVector(nums, k, n - 1);
+    }
+};
