@@ -45,6 +45,21 @@ int main() {
 
 
 // Method 1: using XOR
+int findOddOccuringElement(int arr[], int n){
+  int ans = 0;
+  for(int i=0; i<n; i++)
+    ans ^= arr[i];
+  return ans;
+}
+
+int main() {
+  int arr[] = {10,10,2,2,3,3,12,5,5,6,6,7,7};
+  int n = sizeof(arr)/sizeof(arr[0]);
+  int ans = findOddOccuringElement(arr, n);
+  cout << ans << endl;
+}
+
+// Method 2: using sort() ; check if theres any no. occuring odd amount of times.
 
 
 
