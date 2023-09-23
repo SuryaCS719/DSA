@@ -3,7 +3,7 @@ Given three arrays sorted in increasing order. Find the elements that are common
 Note: can you take care of the duplicates without using any additional Data Structure.
 */
 
-// Method 1: Using Set data structure ; TC: O(n1+n2+n3) SC: O(n1+n2+n3) 
+// Method 1: Using Set data structure ; TC: O(n1+n2+n3) SC: O(n) 
 class Solution
 {
     public:    
