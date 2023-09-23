@@ -23,6 +23,7 @@ class Solution
                     i++;
                 else if(B[j] < C[k])
                     j++;
+                // else if (C[k] < A[i])
                 else
                     k++;
             }
