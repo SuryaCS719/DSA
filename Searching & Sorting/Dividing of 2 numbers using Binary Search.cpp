@@ -37,4 +37,4 @@ int main(){
         cout << ans;
 }
 
-// 10.2 Dividing of 2 numbers Float O/P variation ; Custom.
+// 10.2 Dividing of 2 numbers and to produce the o/p with n precision values.
