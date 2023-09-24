@@ -34,7 +34,16 @@ void selectionSort(vector<int>& arr, int n){
 
 // 3. Insertion Sort -> TC: O(n^2) ; SC: O(1)
 void insertionSort(vector<int>& arr, int n){
-  
+  for(int i = 1; i < n; i++){
+    int key = arr[i];
+    int j = i - 1;
+    while(j >= 0 && arr[j] > key){   //fails when j is out of bound
+      arr[j+1] = arr[j];
+      j--;   // j will be outofbound i.e -1
+    }
+    arr[j+1] = key; 
+    // j+1 cuz when j is outofbound i.e = -1 then -1 + 1 = 0 so arr[j+1] which is equal to arr[0] if taken arr[j] that would be equal to arr[-1]
+  }
 }
 
 
