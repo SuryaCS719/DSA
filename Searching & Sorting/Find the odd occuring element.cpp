@@ -34,6 +34,7 @@ int findOddOccuringElement(int arr[], int n){
   return -1; 
 }
 
+
 int main() {
   // int arr[] = {10,10,2,2,3,3,1,5,5,6,6,7,7};
   int arr[] = {10,10,1,2,2,3,3,5,5};
@@ -41,6 +42,39 @@ int main() {
   int ansIndex = findOddOccuringElement(arr, n);
   cout << arr[ansIndex];
   // cout << ansIndex;
+}
+
+// Method 3 Variation Instead of end = mid; this logic can be used, its the same as peak index mountain method 2 logic:
+int findOddOccuringElement(int arr[], int n){
+  int s = 0;
+  int e = n-1;
+  int ans = -1;
+  while(s <= e){
+    int mid = s + (e-s)/2;
+    // incase of single element 
+    if(s == e)
+      return s;
+    
+    //check for mid at odd
+    if(mid & 1){
+      if(mid - 1 >= 0 && arr[mid] == arr[mid-1])
+        s = mid + 1;
+      else
+        e = mid - 1;
+    }
+    //check for mid at even
+    else{
+      if(mid + 1 < n && arr[mid] == arr[mid+1])
+        s = mid + 2;
+      else if(mid - 1 >= 0 && arr[mid] == arr[mid-1])
+        e = mid - 2;
+      else{
+        ans = mid; // here we are reached the right part of the ans or the ans itself.
+        break;
+      }  
+    }
+  }
+  return ans; 
 }
 
 
