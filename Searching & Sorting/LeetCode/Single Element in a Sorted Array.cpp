@@ -10,8 +10,9 @@ public:
         while(s <= e){
             int mid = s + (e-s)/2;
 
-            // if(s == e)
-            //     return nums[s];
+            //incase if there exist no pair only a single element in the vector
+            if(s == e)
+                return nums[s];
 
             //check for mid at odd index
             if(mid & 1){
