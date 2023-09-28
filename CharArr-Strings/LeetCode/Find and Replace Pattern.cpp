@@ -12,8 +12,9 @@ public:
         }
         // update the string
         for(int i=0; i < str.length(); i++){
-            char ch = str[i];
-            str[i] = mapping[ch];
+            // char ch = str[i];
+            // str[i] = mapping[ch];
+            str[i] = mapping[str[i]];
         }
     }
 
