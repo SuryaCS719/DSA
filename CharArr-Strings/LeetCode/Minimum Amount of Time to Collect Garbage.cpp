@@ -1,17 +1,6 @@
 class Solution {
 public:
     int garbageCollection(vector<string>& garbage, vector<int>& travel) {
-        // int pickUpTimeM = 0; 
-        // int pickUpTimeP = 0;
-        // int pickUpTimeG = 0;
-
-        // int travelTimeM = 0;
-        // int travelTimeP = 0;
-        // int travelTimeG = 0; 
-
-        // int lastHouseM = 0;
-        // int lastHouseP = 0;
-        // int lastHouseG = 0;
 
         int pickUpTimeM = 0, pickUpTimeP = 0, pickUpTimeG = 0;
         int travelTimeM = 0, travelTimeP = 0, travelTimeG = 0;
@@ -22,8 +11,9 @@ public:
         for(int i=0; i < garbage.size(); i++){
             string current = garbage[i];
 
-            for(int j=0; j < current.length(); j++){
-                char ch = current[j];
+            for(auto ch: current){
+            // for(int j=0; j < current.length(); j++){
+            //     char ch = current[j];
 
                 if(ch == 'M'){
                     pickUpTimeM++;
