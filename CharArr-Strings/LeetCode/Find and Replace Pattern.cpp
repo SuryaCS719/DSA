@@ -10,11 +10,16 @@ public:
                 start++;
             }
         }
-        // update the string
-        for(int i=0; i < str.length(); i++){
-            // char ch = str[i];
-            // str[i] = mapping[ch];
-            str[i] = mapping[str[i]];
+        // update the string using for loop
+        // for(int i=0; i < str.length(); i++){
+        //     // char ch = str[i];
+        //     // str[i] = mapping[ch];
+        //     str[i] = mapping[str[i]];
+        // }
+
+        // update the string using for each loop and passing it as reference
+        for (char &i : str) {
+            i = mapping[i];
         }
     }
 
