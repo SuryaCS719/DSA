@@ -36,47 +36,49 @@ public:
 
 
 // Method 2: Two pointer 
-// class Solution {
-// public:
-//     int findPairs(vector<int>& nums, int k) {
-//         sort(nums.begin(), nums.end());
-//         int i = 0;
-//         int j = 1;
-//         set <pair<int, int>> ans;
 
-//         while(j < nums.size()){
-//             int diff = nums[j] - nums[i];
-//             if(diff == k /*&& i != j*/){
-//                 ans.insert({nums[i], nums[j]});
-//                 i++, j++;
-//             }
-//             else if(diff > k)
-//                 i++;
-//             // else if(diff < k)
-//             else
-//                 j++;
-//             // instead of && above:
-//             // if(i == j) 
-//             //     j++;
-//         }
-//         return ans.size();
-//     }
-// };
+class Solution {
+public:
+    int findPairs(vector<int>& nums, int k) {
+        sort(nums.begin(), nums.end());
+        int i = 0;
+        int j = 1;
+        set <pair<int, int>> ans;
+
+        while(j < nums.size()){
+            int diff = nums[j] - nums[i];
+            if(diff == k /*&& i != j*/){
+                ans.insert({nums[i], nums[j]});
+                i++, j++;
+            }
+            else if(diff > k)
+                i++;
+            // else if(diff < k)
+            else
+                j++;
+            // instead of && above:
+            // if(i == j) 
+            //     j++;
+        }
+        return ans.size();
+    }
+};
 
 
 // Method 1: BruteForce
-// class Solution {
-// public:
-//     int findPairs(vector<int>& nums, int k) {
-//         sort(nums.begin(), nums.end());
-//         set<pair<int, int>> count;
-//         for(int i = 0; i < nums.size(); i++){
-//             for(int j = i+1; j < nums.size(); j++){
-//                 if(abs(nums[i] - nums[j]) == k){
-//                     count.insert({nums[i], nums[j]});
-//                 }
-//             }
-//         }
-//         return count.size();
-//     }
-// };
+
+class Solution {
+public:
+    int findPairs(vector<int>& nums, int k) {
+        sort(nums.begin(), nums.end());
+        set<pair<int, int>> count;
+        for(int i = 0; i < nums.size(); i++){
+            for(int j = i+1; j < nums.size(); j++){
+                if(abs(nums[i] - nums[j]) == k){
+                    count.insert({nums[i], nums[j]});
+                }
+            }
+        }
+        return count.size();
+    }
+};
