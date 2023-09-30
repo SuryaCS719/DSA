@@ -15,7 +15,7 @@ int binarySearch(int arr[], int start, int end, int x){
   return -1;
 }
 
-// Exponential Search
+// Exponential Search aka Doubling Search, Galloping search and Struzik search.
 int exponentialSearch(int arr[], int n, int x){
   if(arr[0] == x) return 0;
   int i = 1;
@@ -34,7 +34,8 @@ int main() {
 }
 
 /* Application:
-1. Used on infite sized arrays
+1. Used on infite sized arrays or also known as unbounded arrays.
 2. better than binary Search if the element to be searched is in the beginning of the array
-2. time complexity slightly lesser than binary search as it applies bS on sub   array instead of whole array.
+3. time complexity slightly lesser than binary search as it applies bS on a subarray instead of whole array.
+i.e BS TC is: O(logn) whereas ExpS TC is: O(log(2log^m-1)) that is also O(log((2log^M)/2)))
 */
