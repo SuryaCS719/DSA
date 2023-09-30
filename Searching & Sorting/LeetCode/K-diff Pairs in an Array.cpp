@@ -8,7 +8,7 @@ public:
         while(start <= end){
             int mid = start + (end - start) / 2;
             if(nums[mid] == x){
-                return mid;
+                return mid; // you can return anything here we just need proof that we have an element that is = to a[i] + k. so return 1 or anything it doesnt matter
             }
             else if(x > nums[mid])
                 start = mid + 1;
