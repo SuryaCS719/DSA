@@ -6,14 +6,14 @@ class Solution
     
     bool isPossibleSolution(int arr[], int n, int m, int sol){
         int pageSum = 0;
-        int numberOfAllocations = 1;
+        int allocationsPerStudent = 1;
         for(int i = 0; i < n; i++){
             if(arr[i] > sol)
                 return false;
             if(pageSum + arr[i] > sol){
-                numberOfAllocations++;
+                allocationsPerStudent++;
                 pageSum = arr[i];
-                if(numberOfAllocations > m)
+                if(allocationsPerStudent > m)
                     return false;
             }
             else
