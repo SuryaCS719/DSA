@@ -8,7 +8,8 @@
 6. #include <algorithm> // STL sort(), reverse()
 7. #include <cmath> // math functions
 8. #include <unordered_map> // Hash table
-9. #include <string.h>
+9. #include <string.h> // Manipulate & Macros for string manipulations
+10. #include <numeric> // Accumulate
 
 
 
