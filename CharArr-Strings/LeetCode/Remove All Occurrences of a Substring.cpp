@@ -1,3 +1,22 @@
+// Method 2: W/out using erase 
+class Solution {
+public:
+    string removeOccurrences(string s, string part) {
+        while(1){
+            int found = s.find(part);
+            if(found == string::npos)
+                break;
+            
+            string leftPart = s.substr(0, found);
+            string rightPart = s.substr(found + part.length(), s.length()); 
+            // can use size instead of length
+            s = leftPart + rightPart;
+        }
+        return s;
+    }
+};
+
+// Method 1: Using erase 
 class Solution {
 public:
     string removeOccurrences(string s, string part) {
