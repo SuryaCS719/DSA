@@ -1,4 +1,41 @@
 // Method 4: Moore's Voting Algorithm - Best Approach ; O(n)
+// Incase if the majority doesnt always exist in the array then:
+class Solution {
+public:
+    int majorityElement(vector<int>& nums) {
+        int n = nums.size();
+        int ansIndex = 0;
+        int count = 1;
+        for(int i = 1; i < n; i++){
+            if(nums[i] == nums[ansIndex])
+                count++;
+            else
+                count--;
+                
+            if(count == 0){
+                ansIndex = i;
+                // ans = ansIndex;
+                count++;
+            }
+        }
+        // return nums[ansIndex];
+        // to check if the given is majority element or not.
+        // i.e if ele repeats > n/2 times.
+        int c = 0;
+        for(int i=0; i < n; i++){
+            if(nums[i] == nums[ansIndex])
+                c++;
+        }
+        if(c > n/2)
+            return nums[ansIndex];
+        else
+            return -1;
+    }
+};
+
+
+// Method 4: Moore's Voting Algorithm - Best Approach ; O(n)
+// the below works because the question says assume that majority ele always exists.
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
