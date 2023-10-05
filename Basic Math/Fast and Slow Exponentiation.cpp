@@ -27,3 +27,21 @@ int main() {
   cout << slowExpo(5, 4) << endl;
   return 0;
 }
+
+
+// GFG: Modular Exponentiation for large numbers
+class Solution
+{
+	public:
+		long long int PowMod(long long int x,long long int n,long long int M)
+		{
+		    long long int ans = 1;
+		    while(n > 0){
+		        if(n & 1) // if n is odd
+		            ans = (ans * x) % M;
+		        x = (x * x) % M;
+		        n >>= 1;
+		    }
+		    return ans; // no need to return ans % M as ans is being % by M at each iteration
+		}
+};
