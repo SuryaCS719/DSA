@@ -56,7 +56,7 @@ vector<bool> Sieve(int n){
   return sieve;
 }
 
-// Segmented Sieve
+// Segmented Sieve ; TC: O(sqrt(R) * ((R - L) / prime)) 
 vector<bool> segmentedSieve(int L, int R){
   // get a prime array so that we can use it to mark the segmented sieve
   vector<bool> sieve = Sieve(sqrt(R));
