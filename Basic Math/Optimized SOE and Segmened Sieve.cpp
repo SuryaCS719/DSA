@@ -5,10 +5,8 @@ using namespace std;
 
 vector<bool> Sieve(int n){
   vector<bool> sieve(n+1, true);
-  int count = 0;
   sieve[0] = sieve[1] = false;
   for(int i = 2; i*i <= n; i++){ // Optimization 2 on outer loop ; same as i <= sqrt(n)
-    count++;
     int j = i * i; // Optimization 1 on inner loop 
     while(j <= n){
       sieve[j] = false;
@@ -47,10 +45,8 @@ using namespace std;
 // Optimized Sieve of Eratosthenes -> TC: O(n*log(logn)) still same in the worst case or upper bound
 vector<bool> Sieve(int n){
   vector<bool> sieve(n+1, true);
-  int count = 0;
   sieve[0] = sieve[1] = false;
   for(int i = 2; i*i <= n; i++){ // Optimization 2 on outer loop ; same as i <= sqrt(n)
-    count++;
     int j = i * i; // Optimization 1 on inner loop 
     while(j <= n){
       sieve[j] = false;
