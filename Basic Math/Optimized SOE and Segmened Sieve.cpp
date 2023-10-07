@@ -1,3 +1,4 @@
+// -----------------------------      Question 1 -------------------------------------------------------
 // Optimized Sieve of Eratosthenes -> TC: O(n*log(logn)) still same in the worst case or upper bound
 #include <iostream>
 #include <vector>
@@ -31,6 +32,7 @@ int main() {
 
 */
 
+// -----------------------------      Question 2 -------------------------------------------------------
 // Segmented Sieve: 
 
 #include <iostream>
