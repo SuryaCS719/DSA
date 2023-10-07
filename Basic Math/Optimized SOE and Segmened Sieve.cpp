@@ -8,10 +8,12 @@ vector<bool> Sieve(int n){
   vector<bool> sieve(n+1, true);
   sieve[0] = sieve[1] = false;
   for(int i = 2; i*i <= n; i++){ // Optimization 2 on outer loop ; same as i <= sqrt(n)
-    int j = i * i; // Optimization 1 on inner loop 
-    while(j <= n){
-      sieve[j] = false;
-      j += i;
+    if(sieve[i]){
+      int j = i * i; // Optimization 1 on inner loop 
+      while(j <= n){
+        sieve[j] = false;
+        j += i;
+      }
     }
   }
   return sieve;
@@ -49,10 +51,12 @@ vector<bool> Sieve(int n){
   vector<bool> sieve(n+1, true);
   sieve[0] = sieve[1] = false;
   for(int i = 2; i*i <= n; i++){ // Optimization 2 on outer loop ; same as i <= sqrt(n)
-    int j = i * i; // Optimization 1 on inner loop 
-    while(j <= n){
-      sieve[j] = false;
-      j += i;
+    if(sieve[i]){
+      int j = i * i; // Optimization 1 on inner loop 
+      while(j <= n){
+        sieve[j] = false;
+        j += i;
+      }
     }
   }
   return sieve;
