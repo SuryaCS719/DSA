@@ -72,8 +72,16 @@ vector<bool> segmentedSieve(int L, int R){
       basePrimes.push_back(i);
   }
   vector<bool> segSieve(R-L+1, true);
-  if(L == 0 || L == 1) // base condition since 0 and 1 are not prime nos
-    segSieve[L] = false;
+
+  /* ignore this base cond for now
+  // if(L == 0 || L == 1) // base condition since 0 and 1 are not prime nos
+  //   segSieve[L] = false; */
+
+  if(L == 1)
+    segSieve[L-1] = false;
+  // if(L == 0)
+  //   segSieve[L] = false;
+  //   segSieve[L] = segSieve[L+1] = false;
   
   for(auto prime: basePrimes){
     int first_mul = (L / prime) * prime;
