@@ -46,8 +46,13 @@ public:
         }
         
         vector<bool> segmentedSieve(R-L+1, true);
-        if(L == 0 || L == 1)
-            segmentedSieve[L] = false;
+        // if(L == 0 || L == 1)
+        //     segmentedSieve[L] = false;
+        if(L == 1)
+            segmentedSieve[L-1] = false;
+        // if(L == 0)
+        //     segmented[L] = false;
+        //    //segmentedSieve[L] = segmentedSieve[L+1] = false;
     
         for(auto prime: basePrimes){
             int firstMultiple = (L / prime) * prime;
@@ -66,11 +71,17 @@ public:
                 ans.push_back(i + L);
         }   
         
-        for(auto i: ans)
-            cout << i << " ";
-        cout << endl;
+        // for(auto i: ans)
+        //     cout << i << " ";
+        // cout << endl;
 
-        long long prod = accumulate(ans.begin(), ans.end(), 1, multiplies<long long>());
+        // long long prod = accumulate(ans.begin(), ans.end(), 1, multiplies<long long>());
+        
+        long long prod = 1;
+        long long m = pow(10, 9) + 7;
+        for(int i = 0; i < ans.size(); i++){
+                prod = (prod * ans[i]) % m;
+        }
         return prod;
     }
 };
