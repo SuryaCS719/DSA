@@ -1,4 +1,4 @@
-// Correct solution but will TLE as this is supposed to be solved using DP.
+// Correct solution but will get TLE as this is supposed to be solved using DP.
 // Pattern: Exploring all possible ways
 class Solution
 {
