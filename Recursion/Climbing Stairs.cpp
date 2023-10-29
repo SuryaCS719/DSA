@@ -21,6 +21,21 @@ public:
     }
 };
 
+// Bottom - Up Thinking approach : Lakshya bhaiya
+
+class Solution {
+public:
+    int climbStairs(int n) {
+        if(n == 0)
+            return 1;
+        if(n < 0)
+            return 0;
+            
+        int takeOneStep = climbStairs(n - 1);
+        int takeTwoStep = climbStairs(n - 2);
+        return takeOneStep + takeTwoStep;
+    }
+};
 
 // iterative approach - same as fibonacci logic:
 class Solution {
