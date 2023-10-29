@@ -1,7 +1,9 @@
-/* 3. Subsequences of a string
+/* 3. Subsequences of a string using recursion:
 Note: Pattern is to include or to exclude characters
 2^n where n = length of the string combinations of subsequences are produced.
 */
+
+// METHOD - 1
 
 void findSubsequences(string str, string output, int i){
   if(i >= str.length()){
@@ -34,4 +36,33 @@ int main(){
   string str = "abc";
   findSubsequences(str, "", 0);
   findSubsequencesV2(str, "", 0);
+}
+
+
+// 7. Homework: Subsequences of a string using bit masking. // TC: 2^n * n -> O(2^n)
+
+// METHOD - 2
+
+void subsequence(string& s){
+    int noOfSubsequences = pow(2, s.size()); 
+    for(int n = 0; n < noOfSubsequences; n++){
+        string out;
+        int num = n;
+        // convert num to binary
+        int i = 0;
+        while(num){
+            int bit = num & 1;
+            if(bit) // bit==1
+                out.push_back(s[i]);
+            i++;
+            num >>= 1;
+        }
+        cout << out << endl;
+    }
+}
+
+int main(){
+    string s = "abc";
+    subsequence(s);
+    return 0;
 }
