@@ -1,4 +1,4 @@
-// correct logic ; but throws TLE
+// correct logic ; but throws TLE as TC: O(2^n)
 
 class Solution {
 public:
