@@ -1,5 +1,6 @@
 // Correct solution but will get TLE as this is supposed to be solved using DP.
 // Pattern: Exploring all possible ways
+// TC: O(3^n) ; as we have 3 recursive calls
 class Solution
 {
     public:
