@@ -1,4 +1,4 @@
-// 2. Raze in a Maze ; IMP Q
+// 2. Raze in a Maze ; IMP Q ; Backtracking
 
 
 // 3 conditions to keep in mind:
