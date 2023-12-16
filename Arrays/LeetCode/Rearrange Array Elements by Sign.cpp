@@ -32,6 +32,7 @@ public:
         }
         vector<int> ans;
         int i = 0;
+        // since WKT-even length consisting of an equal number of positive and negative 
         while (i < pos.size()){
             ans.push_back(pos[i]);
             ans.push_back(neg[i]);
@@ -40,3 +41,27 @@ public:
         return ans;
     }
 };
+
+
+// Note: 
+// incase if array length is not even and does not have equal +ve and -ve no then:
+/*
+vector<int> ans;
+        int i = 0;
+        while (i < pos.size() && i < neg.size()) {
+            ans.push_back(pos[i]);
+            ans.push_back(neg[i]);
+            i++;
+        }
+        // Append remaining positive elements (if any)
+        while (i < pos.size()) {
+            ans.push_back(pos[i]);
+            i++;
+        }
+        // Append remaining negative elements (if any)
+        while (i < neg.size()) {
+            ans.push_back(neg[i]);
+            i++;
+        }
+*/
+
