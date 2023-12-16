@@ -19,6 +19,41 @@ public:
     }
 };
 
+/* Incase if array length is not even and does not have equal +ve and -ve no then:
+
+class Solution {
+public:
+    vector<int> rearrangeArray(vector<int>& nums) {
+        vector<int> ans(nums.size());
+        int evenIndex = 0;
+        int oddIndex = 1;
+        int lastAddedIndex = 0;  // Initialize the index variable
+
+        for(int i=0; i<nums.size(); i++) {
+            if(nums[i] > 0) {
+                ans[evenIndex] = nums[i];
+                evenIndex += 2;
+                lastAddedIndex = evenIndex;  // Update the last added index
+            }
+            else {
+                ans[oddIndex] = nums[i];
+                oddIndex += 2;
+                lastAddedIndex = oddIndex;  // Update the last added index
+            }
+        }
+
+        // Use the last added index for adding remaining positive or negative numbers
+        for (int i = lastAddedIndex; i < nums.size(); i++) {
+            ans[i] = nums[i];
+        }
+
+        return ans;
+    }
+};
+
+*/
+
+
 // Method 2: uses extra space
 class Solution {
 public:
