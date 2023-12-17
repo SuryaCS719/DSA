@@ -13,17 +13,18 @@ int missingElement(int arr[], int n){
             start = mid + 1;
         }
         else if(difference == 2){
-            // currAns = mid; 
-            currAns = arr[mid];
+            currAns = mid; 
+            //currAns = arr[mid];
             end = mid - 1;
         }
     }
 
-    if(currAns == -1)
+    if(currAns + 1 == 0)
+    // if(currAns == -1)
         return n + 1;
 
-    // return currAns + 1;
-    return currAns - 1;
+    return currAns + 1;
+    // return currAns - 1;
 }
 
 int main(){
