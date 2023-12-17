@@ -19,8 +19,7 @@ int missingElement(int arr[], int n){
         }
     }
 
-    if(currAns + 1 == 0)
-    // if(currAns == -1)
+    if(currAns == -1) // or  if(currAns + 1 == 0) 
         return n + 1;
 
     return currAns + 1;
