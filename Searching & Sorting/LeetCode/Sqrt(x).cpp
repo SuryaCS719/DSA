@@ -1,3 +1,20 @@
+// method 1:
+// Time complexity: O(sqrt(x));
+class Solution {
+public:
+    int mySqrt(int x) {
+
+        if (x == 0 || x == 1)
+            return x;
+        long long i = 0;
+        while(i * i <= x){
+            i += 1;
+        }
+        return int(i) - 1;
+    }
+};
+//---------------------
+
 class Solution {
 public:
     int mySqrt(int x) {
