@@ -22,11 +22,12 @@ class Solution
     {
         // return minimum time
         long long start = 0;
-        // long long end = accumulate(arr, arr + n, 0);
-        long long end = 0;
-        for(int i = 0; i < n; i++){
-            end += arr[i];
-        }
+        // long long end = accumulate(arr, arr + n, 0); this wont work cuz accumulate by dft works on int
+        long long end = accumulate(arr, arr + n, static_cast<long long>(0));
+        // long long end = 0;
+        // for(int i = 0; i < n; i++){
+        //     end += arr[i];
+        // }
         
         long long ans = -1;
         
