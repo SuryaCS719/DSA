@@ -14,9 +14,11 @@
 using namespace std;
 
 // This function below handles all the possibilities
-// 1. path closed 
-// 2. out of bound
+// 1. out of bound
+// 2. open path or not
 // 3. check if pos is already visited
+// Note: it's important to check for the out_of_bound condition first before the other 2 cond, as tryin to access the new_values with other 2 cond will throw an error 
+// provided if the  new_values are already out_of_bound
 
 bool isSafe(int srcx, int srcy, int newx, int newy, int maze[][4], int row, int col, vector<vector<bool>>& visited) {
   if(
