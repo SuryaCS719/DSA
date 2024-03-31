@@ -1,25 +1,27 @@
-// 1. Permutations of a string ; Backtracking
+// Permutations of a string ; Backtracking
 
 // Note: passing string as reference thus we use backtracking or else it'll give the wrong ans
 
-void printPermutation(string &str, int i){
-    // basecase
-    if(i >= str.length()){
-        cout << str << endl;
-        return;
-    }
+#include <iostream>
+using namespace std;
 
-    for(int j = i; j < str.length(); j++){
-        swap(str[i], str[j]);
-        // recursion
-        printPermutation(str, i+1);
-        // backtracking
-        swap(str[i], str[j]);
-    }
+void printPermutationRE(string& str, int index){
+  if(index >= str.size()){
+    cout << str << endl;
+    return;
+  }
+
+  for(int j = index; j < str.size(); j++){
+    swap(str[j], str[index]);
+    // RE
+    printPermutationRE(str, index + 1);
+    // Backtracking
+    swap(str[j], str[index]); 
+  }
 }
 
-int main(){
-    string str = "abc";
-    int i = 0;  
-    printPermutation(str, i);
+int main() {
+  string str = "abc";
+  printPermutationRE(str, 0);
+  return 0;
 }
