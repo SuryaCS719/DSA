@@ -43,26 +43,29 @@ int main(){
 
 // METHOD - 2
 
-void subsequence(string& s){
-    int noOfSubsequences = pow(2, s.size()); 
-    for(int n = 0; n < noOfSubsequences; n++){
-        string out;
-        int num = n;
-        // convert num to binary
-        int i = 0;
-        while(num){
-            int bit = num & 1;
-            if(bit) // bit==1
-                out.push_back(s[i]);
-            i++;
-            num >>= 1;
-        }
-        cout << out << endl;
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+void subSequence(string& s){
+  int noOfSubsequences = pow(2, s.size());
+  for(int n = 0; n < noOfSubsequences; n++) {
+    string output;
+    int num = n; // convert num to binary
+    int i = 0;
+    while(num){
+      int bit = num & 1;
+      if(bit) // if bit == 1
+        output.push_back(s[i]);
+      i++;
+      num >>= 1;
     }
+    cout << output << endl;
+  }
 }
 
-int main(){
-    string s = "abc";
-    subsequence(s);
-    return 0;
+int main() {
+  string s = "abc";
+  subSequence(s);
+  return 0;
 }
