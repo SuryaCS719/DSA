@@ -1,3 +1,11 @@
+/* Merge Sort
+Approaches (3): 1. Heap memory alloc & dealloc; 2. Using a temp array to copy elements 3. In-place merge sort
+*/
+
+// This is first approach - allocating and deallocating heap memory; 
+
+// Other approaches are listed in Sort an Array (leetcode) Question [Merge Sort]
+
 #include <iostream>
 using namespace std;
 
