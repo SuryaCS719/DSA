@@ -1,4 +1,8 @@
-// Merge Sort
+/* Merge Sort
+Approaches (3): 1. Heap memory alloc & dealloc; 2. Using a temp array to copy elements 3. In-place merge sort
+*/
+
+// This is second approach - using a temp array. 
 
 class Solution {
 public:
@@ -37,3 +41,10 @@ public:
         return nums;
     }
 };
+
+
+
+// This is third approach - In-place merge sort
+
+
+
