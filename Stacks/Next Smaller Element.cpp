@@ -14,6 +14,7 @@ void nextSmallerElement(int *arr, int size, vector<int> &ans) {
         st.pop();
     // store the answer
     ans[i] = st.top();
+    // push curr into stack cause it might be an another for another element in the left
     st.push(curr);
   }
 }
