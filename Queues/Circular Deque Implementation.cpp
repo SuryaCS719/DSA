@@ -15,6 +15,10 @@ class Deque {
       rear = -1;
     }
 
+    ~Deque() {
+      delete[] arr; // Deallocate memory
+    }
+
     void push_back(int val) {
       // check for overflow
       if((front == 0 && rear == size - 1) || (rear = front - 1)){
