@@ -15,6 +15,10 @@ public:
     rear = -1;
   }
 
+  ~CQueue() {
+    delete[] arr; // Deallocate memory
+   }
+
   void push(int val){
     // check for overflow
     if((front == 0 && rear == size - 1) || (rear == front - 1)){
