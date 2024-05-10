@@ -21,13 +21,11 @@ int sumMinMaxOfAllWindowSizeK(vector<int>& nums, int k) {
         dq.push_back(i);
         dq2.push_back(i);
     }
+    // store first window's ans
+    ans += nums[dq.front()] + nums[dq2.front()];
 
     // Step 2: process remaining windows
     for(int i = k; i < nums.size(); i++) {
-
-        // store ans
-        ans += nums[dq.front()] + nums[dq2.front()];
-
         // removal
         // 1. check for out of bound
         if(!dq.empty() && i - dq.front() >= k)
@@ -46,12 +44,10 @@ int sumMinMaxOfAllWindowSizeK(vector<int>& nums, int k) {
         // addition
         dq.push_back(i);
         dq2.push_back(i);
-
+        
+        // store currrent Window's ans.
+        ans += nums[dq.front()] + nums[dq2.front()];
     }
-
-    // Step 3: process the last window
-    ans += nums[dq.front()] + nums[dq2.front()];
-
     return ans;
 }
 
@@ -59,6 +55,9 @@ int main() {
     vector<int> v{2, 5, -1, 7, -3, -1, -2};
     int k = 4;
     cout << sumMinMaxOfAllWindowSizeK(v, k) << endl;
-
     return 0;
 }
+
+
+// o/p: 18 for k = 4
+// o/p: 14 for k = 2
