@@ -31,32 +31,6 @@ TreeNode* createTree() {
   return root;
 }
 
-void preorderTraversal(TreeNode* root) {
-  if(root == NULL)
-    return;
-  cout << root->val << " ";
-  preorderTraversal(root->left);
-  preorderTraversal(root->right);
-}
-
-void inorderTraversal(TreeNode* root) {
-  if(root == NULL)
-    return;
-  
-  inorderTraversal(root->left);
-  cout << root->val << " ";
-  inorderTraversal(root->right);
-}
-
-void postorderTraversal(TreeNode* root) {
-  if(root == NULL)
-    return;
-  
-  postorderTraversal(root->left);
-  postorderTraversal(root->right);
-  cout << root->val << " ";
-}
-
 void levelwiseTraversal(TreeNode* root) {
   
   queue<TreeNode*> q;
