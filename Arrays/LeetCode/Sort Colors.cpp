@@ -56,7 +56,7 @@ public:
     }
 };
 
-// Method 1: to use sort function: TC: O(nlogN) SC: O(n)
+// Method 1: to use sort function: TC: O(nlogN) SC: O(log n)
 class Solution {
 public:
     void sortColors(vector<int>& nums) {
