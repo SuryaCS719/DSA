@@ -29,3 +29,47 @@ public:
         }
     }
 };
+
+
+// same code as above but with visuals
+class Solution {
+public:
+
+    void reverse2DMatrix(vector<int>& mat) {
+        int size = mat.size();
+        int i = 0;
+        int j = size - 1;
+        while(i < j) {
+            swap(mat[i], mat[j]);
+            i++;
+            j--;
+        }
+    }
+
+    void rotate(vector<vector<int>>& matrix) {
+        // step 1. Transpose the matrix
+        // step 2. reverse the matrix
+        int n = matrix.size();
+        for(int i = 0; i < n; i++) {
+            int m = matrix[i].size();
+            for(int j = i; j < m; j++) {
+                swap(matrix[i][j], matrix[j][i]);
+            }
+        }
+        // the matrix would look like this:
+        // given:              transposed:
+        // 1   2   3           1   4   7
+        // 4   5   6           2   5   8
+        // 7   8   9           3   6   9
+
+        // now reverse the transposed matrix row-wise
+        for(int row = 0; row < n; row++){
+            // reverse(matrix[row].begin(), matrix[row].end());
+            reverse2DMatrix(matrix[row]);
+        }
+        // transposed:         reversed:
+        // 1   4   7           7    4   1
+        // 2   5   8           8    5   2
+        // 3   6   9           9    6   3
+    }
+};
