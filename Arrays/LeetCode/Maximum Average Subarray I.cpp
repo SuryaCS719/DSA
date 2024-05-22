@@ -49,3 +49,34 @@ public:
         return slidingWindow(nums, k);
     }
 };
+
+
+
+// SLW revised
+#include <vector>
+#include <algorithm>
+using namespace std;
+
+class Solution {
+public:
+    double findMaxAverage(vector<int>& nums, int k) {
+        int n = nums.size();
+        int currentSum = 0;
+
+        // Calculate the sum of the first window of size k
+        for (int i = 0; i < k; i++) {
+            currentSum += nums[i];
+        }
+
+        int maxSum = currentSum;
+
+        // Slide the window over the rest of the array
+        for (int i = k; i < n; i++) {
+            currentSum += nums[i] - nums[i - k];
+            maxSum = max(maxSum, currentSum);
+        }
+
+        // Return the maximum average
+        return maxSum / (double) k;
+    }
+};
