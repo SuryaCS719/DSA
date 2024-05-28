@@ -7,7 +7,6 @@ case 2: if carry exists at the end then it needs to be attached to the 0th index
 i.e. if input size is n then output size will be n + 1; */
 
 #include <iostream>
-#include <unordered_map>
 #include <vector>
 using namespace std;
 
