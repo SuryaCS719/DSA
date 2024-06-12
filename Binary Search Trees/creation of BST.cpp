@@ -43,56 +43,56 @@ void createBST(Node* &root) {
   }
 }
 
-void levelOrderTraversal(Node* root) {
-  queue<Node*> q;
-  q.push(root);
-  q.push(NULL);
+// void levelOrderTraversal(Node* root) {
+//   queue<Node*> q;
+//   q.push(root);
+//   q.push(NULL);
 
-  while(!q.empty()) {
-    Node* front = q.front();
-    q.pop();
+//   while(!q.empty()) {
+//     Node* front = q.front();
+//     q.pop();
     
-    if(front == NULL) {
-      cout << endl;
-      if(!q.empty())
-        q.push(NULL);
-    }
-    else {
-      cout << front->data << " ";
-      if(front->left)
-        q.push(front->left);
-      if(front->right)
-          q.push(front->right);
-    }
-  }
-}
+//     if(front == NULL) {
+//       cout << endl;
+//       if(!q.empty())
+//         q.push(NULL);
+//     }
+//     else {
+//       cout << front->data << " ";
+//       if(front->left)
+//         q.push(front->left);
+//       if(front->right)
+//           q.push(front->right);
+//     }
+//   }
+// }
 
-void preorder(Node* root) {
-  if(root == NULL)
-      return;
+// void preorder(Node* root) {
+//   if(root == NULL)
+//       return;
   
-  cout << root->data << " ";
-  preorder(root->left);
-  preorder(root->right);
-}
+//   cout << root->data << " ";
+//   preorder(root->left);
+//   preorder(root->right);
+// }
 
-void inorder(Node* root) {
-  if(root == NULL)
-      return;
+// void inorder(Node* root) {
+//   if(root == NULL)
+//       return;
   
-  inorder(root->left);
-  cout << root->data << " ";
-  inorder(root->right);
-}
+//   inorder(root->left);
+//   cout << root->data << " ";
+//   inorder(root->right);
+// }
 
-void postorder(Node* root) {
-  if(root == NULL)
-      return;
+// void postorder(Node* root) {
+//   if(root == NULL)
+//       return;
   
-  postorder(root->left);
-  postorder(root->right);
-  cout << root->data << " ";
-}
+//   postorder(root->left);
+//   postorder(root->right);
+//   cout << root->data << " ";
+// }
 
 int main() {
 
