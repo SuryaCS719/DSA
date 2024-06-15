@@ -122,7 +122,6 @@ input: 40 20 60 10 30 50 70 -1
 */
 
 
-
 // BRUTE FORCE 
 
 #include <iostream>
@@ -203,14 +202,14 @@ void inOrderTraversal(Node* root, vector<int>& nodes) {
     inOrderTraversal(root->right, nodes);
 }
 
-Node* createDLLFromNodes(const vector<int>& nodes) {
+Node* createDLLFromNodes(vector<int>& nodes) {
     if (nodes.empty())
-        return nullptr;
+        return NULL;
 
     Node* head = new Node(nodes[0]);
     Node* current = head;
 
-    for (size_t i = 1; i < nodes.size(); ++i) {
+    for (int i = 1; i < nodes.size(); ++i) {
         Node* newNode = new Node(nodes[i]);
         current->right = newNode;
         newNode->left = current; // Use left pointer as prev
@@ -248,3 +247,4 @@ int main() {
 
     return 0;
 }
+
