@@ -48,12 +48,12 @@ int main() {
     cout << arr[i] << " ";
 
   buildHeapfromArray(arr, n);
-  cout << endl << "Heap sprt: " << endl;
+  cout << endl << "Heapified Array: " << endl;
   for(int i = 1; i <= n; i++) 
     cout << arr[i] << " ";
 
   heapSort(arr, n);
-  cout << endl << "Heap sprt: " << endl;
+  cout << endl << "Sorted Array using Heap Sort: " << endl;
   for(int i = 1; i <= n; i++) 
     cout << arr[i] << " ";
     
