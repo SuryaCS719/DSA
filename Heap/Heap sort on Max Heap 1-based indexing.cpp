@@ -58,3 +58,16 @@ int main() {
     cout << arr[i] << " ";
     
 }
+
+
+
+/*
+
+Array: 
+10 20 5 11 6 
+Heapified Array: 
+20 11 5 10 6 
+Sorted Array using Heap Sort: 
+5 6 10 11 20 
+
+*/
