@@ -119,17 +119,13 @@ NodeData* Check_If_CBT_Is_MaxHeap(Node* root) {
 int main() {
   Node* root = NULL;
   int data;
+  cout << "enter data: ";
   cin >> data;
-  cout << "enter data: " << endl;
 
-  while(1) {
+  while(data != -1) {
     root = insertNodeIntoBTLevelWise(root, data);
-
     cout << "Enter data for next node: ";
     cin >> data;
-
-    if (data == -1)
-      break;
   }
 
   cout << "Level order traversal of the binary tree:" << endl;
@@ -145,8 +141,8 @@ int main() {
 
 
 /*
-40
-enter data: 
+
+enter data: 40
 Enter data for next node: 20
 Enter data for next node: 10
 Enter data for next node: 5
@@ -159,8 +155,7 @@ Given CBT is a Max Heap
 
 ----------------------
 
-50
-enter data: 
+enter data: 50
 Enter data for next node: 60
 Enter data for next node: 40
 Enter data for next node: 30
