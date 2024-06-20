@@ -55,13 +55,6 @@ void mergeKSortedArrays(int arr[][4], int n, int k, vector<int>& ans) {
     // Deallocate memory for infoOfTopOfMinHeap
     delete infoOfTopOfMinHeap;
   }
-  
-  // Clean up any remaining elements in the priority queue
-    while (!pq.empty()) {
-        Info* info = pq.top();
-        pq.pop();
-        delete info;
-    }
 }
 
 int main() {
