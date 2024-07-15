@@ -193,7 +193,7 @@ int main() {
      for(char node = 'a'; node <= 'd'; node++) {
         if(visited[node] == false) {
             g.dfs(node, visited);
-            count = count + 1;
+            count = count + 1;  // Increment count only when starting a new DFS
         }
     }
 
