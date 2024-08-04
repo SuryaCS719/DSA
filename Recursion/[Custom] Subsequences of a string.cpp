@@ -2,6 +2,35 @@
 Note: Pattern is to include or to exclude characters
 2^n where n = length of the string combinations of subsequences are produced.
 */
+// striver:
+// print subseq includ exclude recv
+void subseq(int i, string str, int n, vector<string> &ans) {
+  if(i == n) {
+    cout << "-> ";
+    for(auto it : ans)
+      cout << it << " ";
+    cout << endl;
+    return;
+  } 
+
+  // include
+  ans.push_back(string(1, str[i])); 
+  subseq(i + 1, str, n, ans);
+  ans.pop_back();
+
+  // exclude
+  subseq(i + 1, str, n, ans);
+  
+}
+
+int main() {
+  string str = "abc";
+  int n = 3;
+  vector<string> ans;
+  subseq(0, str, n, ans);
+  return 0;
+}
+
 
 // METHOD - 1
 
